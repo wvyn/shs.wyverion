@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="SHS Minecraft Server">
   <meta property="og:description" content="The Unofficial Stafford High School Minecraft Server." />
@@ -11,145 +12,225 @@
   <link rel="icon" href="https://www.staffordhighschool.net/icon.ico" type="image/x-icon">
   <title>SHS Minecraft</title>
   <style>
+    :root {
+      --primary-yellow: #facc15;
+      --bg-body: #1a1a1a;
+      --bg-section: #202020;
+      --bg-note: #262626;
+      --bg-code: #111418;
+      --border-note: #facc15;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0e1117;
-      color: #e6edf3;
+      background-color: var(--bg-body);
+      color: #f2f2f2;
+      margin: 0;
       padding: 2rem;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
-      line-height: 1.6;
-      animation: fadeIn 1s ease-in-out;
+      line-height: 1.75;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1, h2 {
-      color: #58a6ff;
+    h1,
+    h2,
+    h3 {
+      color: var(--primary-yellow);
+      margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
-    pre, code {
-      background-color: #161b22;
-      color: #c9d1d9;
-      padding: 0.75rem;
-      border-radius: 8px;
-      font-family: 'Courier New', monospace;
-      overflow-x: auto;
-      user-select: all;
-    }
-
     .section {
-      margin-bottom: 2.5rem;
-      border-left: 4px solid #30363d;
-      padding-left: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .section:hover {
-      border-left-color: #58a6ff;
+      background-color: var(--bg-section);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      border: 1px solid #2c2c2c;
     }
 
     .note {
-      background: #1c2128;
-      border-left: 5px solid #f0ad4e;
+      background: var(--bg-note);
+      border-left: 5px solid var(--border-note);
       padding: 1rem;
       border-radius: 6px;
       margin-top: 1rem;
     }
 
+    pre {
+      background-color: var(--bg-code);
+      color: #fefce8;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      position: relative;
+      overflow-x: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      background-color: var(--bg-code);
+      color: #fefce8;
+      font-family: 'Courier New', monospace;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #2d2d2d;
+      border: 1px solid #444;
+      color: #facc15;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: #393939;
+    }
+
     a {
-      color: #58a6ff;
+      color: var(--primary-yellow);
       text-decoration: none;
-      word-break: break-word;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin: 0.4rem 0;
+      padding-left: 1.5rem;
     }
 
     .link-button {
       display: inline-block;
-      background: #21262d;
-      border: 1px solid #30363d;
-      color: #58a6ff;
-      padding: 0.5rem 1rem;
+      background: #1f1f1f;
+      border: 1px solid #333;
+      color: var(--primary-yellow);
+      padding: 0.6rem 1rem;
       border-radius: 6px;
       text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
       margin-right: 0.5rem;
-      margin-top: 0.4rem;
+      font-weight: 500;
     }
 
     .link-button:hover {
-      background: #30363d;
+      background-color: #2a2a2a;
       transform: scale(1.03);
+      text-decoration: none;
     }
-
   </style>
 </head>
+
 <body>
 
-  <h1>🏫 Stafford High School Minecraft Server</h1>
+  <h1>SHS Minecraft Server</h1>
 
   <div class="section">
-    <h2>SHS Minecraft Server</h2>
+    <h2>About the Server</h2>
     <div class="note">
-      Hosted on my computer, don't blow it up 😅<br><br>
-      ⚠️ It’s hosted on my home server, it’s not invincible.<br>
-      No DDoS attacks or intentional lag abuse. Let’s keep it running smooth! 😬<br><br>
-      🎮 Supports both <strong>Java</strong> and <strong>Bedrock</strong> clients (on separate servers).
+      This Minecraft server is hosted on my own machine. Please avoid heavy traffic or abuse to help keep it
+      stable.<br><br>
+      Both Java and Bedrock editions are supported (on different ports).
     </div>
   </div>
 
   <div class="section">
-    <h2>🌟 Java Edition (Forge 1.20.1)</h2>
-    <p><strong>Server Address:</strong></p>
-    <pre>mc.staffordhighschool.net</pre>
+    <h2>Vanilla Edition</h2>
+    <p><strong>Connect to the main address:</strong></p>
+    <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>vanilla.staffordhighschool.net</pre>
 
-    <p><strong>Server Info:</strong></p>
-    <pre>
-Client: Forge
-Version: 1.20.1
-Mods:
-  - appliedenergistics2-forge-15.4.2
-  - architectury-9.2.14-forge
-  - badpackets-forge-0.4.3
-  - ftb-chunks-forge-2001.3.6
-  - ftb-library-forge-2001.2.9
-  - ftb-teams-forge-2001.3.1
-  - gravestone-forge-1.20.1-1.0.24
-  - guideme-20.1.7
-  - jei-1.20.1-forge-15.20.0.106
-  - Mekanism-1.20.1-10.4.15.75
-  - MekanismAdditions-1.20.1-10.4.15.75
-  - MekanismGenerators-1.20.1-10.4.15.75
-  - MekanismTools-1.20.1-10.4.15.75
-  - OptiFine_1.20.1_HD_U_I6
-  - voicechat-forge-1.20.1-2.5.30
-  - wthit-forge-8.16.2
+    <div class="note">
+      Use this address for both Java and Bedrock. Just make sure you're using the correct port.
+    </div>
+
+    <div class="note">
+      <h3>Java Edition</h3>
+      <p>Java players don’t need to specify a port.</p>
+      <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>vanilla.staffordhighschool.net</pre>
+    </div>
+
+    <div class="note">
+      <h3>Bedrock Edition</h3>
+      <p>Use port <strong>19132</strong>.</p>
+      <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>vanilla.staffordhighschool.net:19132</pre>
+    </div>
+
+    <div class="note">
+      <h3>Cross-Platform Play (Java & Bedrock Together)</h3>
+      <p>This setup allows both Java and Bedrock players to play together on the same world. However, they must connect
+        using different ports.</p>
+
+      <ul>
+        <li><strong>Java Edition</strong> — No port needed:
+          <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>vanilla.staffordhighschool.net</pre>
+        </li>
+        <li><strong>Bedrock Edition</strong> — Use this port for cross-play support:
+          <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>vanilla.staffordhighschool.net:19134</pre>
+        </li>
+      </ul>
+
+      <p><strong>Important Notes:</strong></p>
+      <ul>
+        <li>Both versions will join the same world with shared progress.</li>
+        <li>Ensure your game version matches the server’s (typically the latest stable release).</li>
+        <li>If you’re on Bedrock and can’t connect, make sure to use the correct port (19134).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Modded Java Edition (Forge 1.20.1)</h2>
+    <p><strong>Server Address:</strong></p>
+    <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>mc.staffordhighschool.net</pre>
+
+    <p><strong>Required Client:</strong> Forge 1.20.1</p>
+    <p><strong>Installed Mods:</strong></p>
+    <pre><button class="copy-btn" onclick="copyText(this)">Copy</button>
+- appliedenergistics2
+- architectury
+- badpackets
+- ftb-chunks, ftb-library, ftb-teams
+- gravestone, guideme, jei
+- Mekanism (core, tools, generators, additions)
+- OptiFine
+- voicechat
+- wthit
     </pre>
 
-    <p><strong>Downloads:</strong></p>
-    <a class="link-button" href="https://adfoc.us/serve/sitelinks/?id=271228&url=https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-installer.jar" target="_blank">Download Forge 1.20.1</a>
-    <a class="link-button" href="https://cdn.discordapp.com/attachments/1370572990663626823/1370579791304196116/mods.zip?ex=68200366&is=681eb1e6&hm=732abb0b1e585e882a89121a2926d8cca0a6c8e368d2cc3e286d0037e333bace&" target="_blank">Download Mods (mods.zip)</a>
+    <p><strong>Get everything you need below:</strong></p>
+    <a class="link-button"
+      href="https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-installer.jar"
+      target="_blank">Download Forge Installer (1.20.1)</a>
+    <a class="link-button"
+      href="https://cdn.discordapp.com/attachments/1370572990663626823/1370579791304196116/mods.zip"
+      target="_blank">Download Mods Zip</a>
   </div>
-<div class="section">
-  <h2>💬 Join the Discord</h2>
-  <p>Stay updated, ask questions, or just hang out with other players!</p>
-  <a class="link-button" href="https://discord.gg/H2kVESwNwx" target="_blank">Join the Discord Server</a>
-</div>
+
+  <div class="section">
+    <h2>Community & Support</h2>
+    <p>For updates, support, and chatting with other players, join the server Discord below:</p>
+    <a class="link-button" href="https://discord.gg/H2kVESwNwx" target="_blank">Join the SHS Minecraft Discord</a>
+  </div>
+
+  <script>
+    function copyText(button) {
+      const text = button.parentElement.innerText.replace("Copy", "").trim();
+      navigator.clipboard.writeText(text).then(() => {
+        button.textContent = "Copied!";
+        setTimeout(() => button.textContent = "Copy", 2000);
+      });
+    }
+  </script>
 
 </body>
+
 </html>
